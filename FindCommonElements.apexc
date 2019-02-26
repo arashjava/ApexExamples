@@ -4,8 +4,15 @@ public class FindCommonElement {
         List<integer> list1= new List<integer>{1,4,7,8};
         List<integer> list2= new List<integer>{2,5,3,6,4,8,9};
         List<integer> list3= new List<integer>{9,5,2,7,4};
-           
+
         System.debug(findCommonElements(list1, list2, list3));
+
+        List<integer> list4= new List<integer>{15, 19, 20, 22, 29, 65, 75};
+        List<integer> list5= new List<integer>{19, 22, 24, 26, 45, 65, 70};
+        List<integer> list6= new List<integer>{2, 4, 9, 19, 19, 22, 65, 75};
+
+        System.debug(findCommonElements(list4, list5, list6));
+
     }
     
     private static Set<integer> findCommonElements(
