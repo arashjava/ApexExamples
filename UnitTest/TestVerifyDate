@@ -1,0 +1,27 @@
+@isTest
+private class TestVerifydate {
+
+    @isTest
+    static void isFirstDateGreater(){
+        Date d1= date.newInstance(2019, 04, 21);
+        Date d2= date.newInstance(2019, 03, 28);
+        Date endOfMonth= date.newInstance(2019, 04, 30);
+		System.assertEquals(endOfMonth, VerifyDate.CheckDates(d1, d2));
+    }
+    
+    @isTest
+    static void isNotWithin30DaysSecondDateGreater(){
+        Date d1= date.newInstance(2019, 04, 21);
+        Date d2= date.newInstance(2019, 05, 28);
+        Date endOfMonth= date.newInstance(2019, 04, 30);
+		System.assertEquals(endOfMonth, VerifyDate.CheckDates(d1, d2));
+    }
+
+    @isTest
+    static void isWithin30Days(){
+        Date d1= date.newInstance(2019, 04, 21);
+        Date d2= date.newInstance(2019, 05, 18);
+		System.assertEquals(d2, VerifyDate.CheckDates(d1, d2));
+    }
+
+}
